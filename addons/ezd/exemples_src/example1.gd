@@ -1,41 +1,48 @@
+class_name Example1
 extends Node2D
-class_name Ex1
+# Example 1: Simple Movement Animation
 
-export var time:=5.0
-export var easing:=-3.0
 
-onready var begin:=$"../begin"
-onready var end:=$"../end"
+export var time := 5.0
+export var easing := -3.0
 
-onready var current_target:=end
-onready var current_node:=begin
+var _timer: float
 
-var timer:float
+onready var _begin: Node2D = $"../begin"
+onready var _end: Node2D = $"../end"
+onready var _current_target := _end
+onready var _current_node := _begin
+
 
 func _ready() -> void:
-	global_position = current_target.global_position
+	global_position = _current_target.global_position
 
-func _process(delta: float) -> void:
-	timer+=delta
+
+func _process(delta : float) -> void:
+	_timer += delta
 	
-	timer = clamp(timer,0,time)
+	_timer = clamp(_timer, 0, time)
 	
-	var x=timer/time
+	var x := _timer / time
 	
-	global_position = Ezd.ezd_vec2(current_node.global_position,current_target.global_position,x,-3.0)
+	global_position = Ezd.ezd_vec2(_current_node.global_position,
+		_current_target.global_position, x, -3.0)
 	
-	if(x==1):
-		timer=0
+	if x == 1:
+		_timer = 0
 		switch_target()
-	
+
+
 func switch_target():
-	if(current_target == begin):
-		current_target = end
-		current_node=begin
-	elif(current_target == end):
-		current_target = begin
-		current_node=end
+	if _current_target == _begin:
+		_current_target = _end
+		_current_node = _begin
+	
+	elif _current_target == _end:
+		_current_target = _begin
+		_current_node=_end
 
 
 func _on_next_button_up() -> void:
 	get_tree().change_scene("res://addons/ezd/examples/example2.tscn")
+

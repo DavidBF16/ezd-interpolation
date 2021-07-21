@@ -1,12 +1,14 @@
+class_name Example2
 extends KinematicBody2D
-class_name Ex2
+# Example 2: Character Movement
 
-export var speed:=500.0
-export var smoothness:=5.0
-export var easing:=-2.5
+export var speed := 500.0
+export var smoothness := 6.0
+export var easing := -2.0
 
-var dir:Vector2
-var vel:Vector2
+var _dir: Vector2
+var _vel: Vector2
+
 
 func _process(delta: float) -> void:
 	apply_input()
@@ -14,20 +16,22 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	apply_movement(delta)
-	pass
 
-func apply_input()->void:
-	var x:=Input.get_action_strength("ui_right")-Input.get_action_strength("ui_left")
-	var y:=Input.get_action_strength("ui_down")-Input.get_action_strength("ui_up")
+func apply_input() -> void:
+	var x := Input.get_action_strength("ui_right")
+	- Input.get_action_strength("ui_left")
 	
-	dir=Vector2(x,y)
+	var y := Input.get_action_strength("ui_down") 
+	- Input.get_action_strength("ui_up")
+	
+	_dir = Vector2(x, y)
 
-func apply_movement(delta)->void:
-	var target:=dir*speed
+func apply_movement(delta : float) -> void:
+	var target := _dir * speed
 	
-	vel=Ezd.ezd_vec2(vel, target, smoothness * delta, easing)
+	_vel = Ezd.ezd_vec2(_vel, target, smoothness * delta, easing)
 	
-	vel = move_and_slide(vel, Vector2.UP)
+	_vel = move_and_slide(_vel, Vector2.UP)
 
 
 func _on_next_button_up() -> void:
@@ -36,3 +40,4 @@ func _on_next_button_up() -> void:
 
 func _on_previous_button_up() -> void:
 	get_tree().change_scene("res://addons/ezd/examples/example1.tscn")
+

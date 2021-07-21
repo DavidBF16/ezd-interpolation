@@ -1,35 +1,50 @@
 extends Node
 class_name Ezd
+# Ezd Interpolation source code
 
-#			eased variant interpolation
-static func ezd(from,to,weight:float,easing:float):
-	return lerp(from,to,ease(weight,easing))
 
-#			eased float interpolation
-static func ezd_float(from:float,to:float,weight:float,easing:float)->float:
-	return lerp(from,to,ease(weight,easing))
+# Eased variant interpolation
+static func ezd (from, to, weight : float, easing : float):
+	return lerp(from, to, ease(weight, easing))
 
-#			eased Vector2 interpolation
-static func ezd_vec2(from:Vector2,to:Vector2,weight:float,easing:float)->Vector2:
-	return lerp(from,to,ease(weight,easing))
 
-#			eased Vector3 interpolation
-static func ezd_vec3(from:Vector3,to:Vector3,weight:float,easing:float)->Vector3:
-	return lerp(from,to,ease(weight,easing))
+# Eased float interpolation
+static func ezd_float(from : float, to : float,
+		weight : float, easing : float) -> float:
+	return lerp(from, to, ease(weight, easing))
 
-#			eased Color interpolation
-static func ezd_color(from:Color,to:Color,weight:float,easing:float)->Color:
-	return lerp(from,to,ease(weight,easing))
 
-#			eased int interpolation
-static func ezd_int(from:int,to:int,weight:float,easing:float)->float:
-	return lerp(from,to,ease(weight,easing))
+# Eased Vector2 interpolation
+static func ezd_vec2(from : Vector2, to : Vector2,
+		weight : float, easing : float) -> Vector2:
+	return lerp(from, to, ease(weight, easing))
 
-#			eased angle(radians) interpolation
-static func ezd_radians(from:float,to:float,weight:float,easing:float)->float:
-	return lerp_angle(from,to,ease(weight,easing))
 
-#			eased angle(degrees) interpolation
+# Eased Vector3 interpolation
+static func ezd_vec3(from : Vector3, to : Vector3, 
+		weight : float, easing : float) -> Vector3:
+	return lerp(from, to, ease(weight, easing))
+
+
+# Eased Color interpolation
+static func ezd_color(from : Color, to : Color, 
+		weight : float, easing : float) -> Color:
+	return lerp(from, to, ease(weight, easing))
+
+
+# Eased int interpolation
+static func ezd_int(from : int, to : int,
+		weight : float, easing : float) -> float:
+	return lerp(from, to, ease(weight, easing))
+
+
+# Eased angle(radians) interpolation
+static func ezd_radians(from : float, to : float,
+		weight : float, easing : float) -> float:
+	return lerp_angle(from, to, ease(weight, easing))
+
+
+# Eased angle(degrees) interpolation
 static func ezd_degrees(from:float,to:float,weight:float,easing:float)->float:
 	var from_rad = deg2rad(from)
 	var to_rad = deg2rad(to)
@@ -38,6 +53,8 @@ static func ezd_degrees(from:float,to:float,weight:float,easing:float)->float:
 	
 	return rad2deg(x)
 
-#			eased inverse float interpolation
+
+# Eased inverse float interpolation
 static func inverse_ezd_float(from:float,to:float,weight:float,easing:float)->float:
 	return inverse_lerp(from,to,ease(weight,easing))
+
