@@ -3,8 +3,8 @@ extends KinematicBody2D
 # Example 2: Character Movement
 
 export var speed := 500.0
-export var smoothness := 6.0
-export var easing := -2.0
+export var smoothness := 5.0
+export var easing := -1.5
 
 var _dir: Vector2
 var _vel: Vector2

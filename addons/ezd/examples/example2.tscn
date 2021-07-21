@@ -167,8 +167,6 @@ shape = SubResource( 1 )
 [node name="plr" type="KinematicBody2D" parent="."]
 position = Vector2( 640, 360 )
 script = ExtResource( 3 )
-smoothness = 6.0
-easing = -1.5
 
 [node name="sprite" type="Sprite" parent="plr"]
 modulate = Color( 0.360784, 1, 0, 1 )
