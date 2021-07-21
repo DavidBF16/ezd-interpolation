@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	
 	var x=timer/time
 	
-	global_position = Ezd.ezdlerp_vec2(current_node.global_position,current_target.global_position,x,-3.0)
+	global_position = Ezd.ezd_vec2(current_node.global_position,current_target.global_position,x,-3.0)
 	
 	if(x==1):
 		timer=0

@@ -25,7 +25,7 @@ func apply_input()->void:
 func apply_movement(delta)->void:
 	var target:=dir*speed
 	
-	vel=Ezd.ezdlerp_vec2(vel, target, smoothness * delta, easing)
+	vel=Ezd.ezd_vec2(vel, target, smoothness * delta, easing)
 	
 	vel = move_and_slide(vel, Vector2.UP)
 
