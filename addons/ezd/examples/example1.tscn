@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://addons/ezd/exemples_src/example1.gd" type="Script" id=1]
+[ext_resource path="res://addons/ezd/examples_src/example1.gd" type="Script" id=1]
 [ext_resource path="res://addons/ezd/sprites/circle32.png" type="Texture" id=2]
 
 [node name="ex1" type="Node2D"]

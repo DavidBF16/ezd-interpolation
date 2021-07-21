@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://addons/ezd/sprites/icon.png" type="Texture" id=1]
-[ext_resource path="res://addons/ezd/exemples_src/example3.gd" type="Script" id=2]
+[ext_resource path="res://addons/ezd/examples_src/example3.gd" type="Script" id=2]
 
 [node name="ex3" type="Node2D"]
 
