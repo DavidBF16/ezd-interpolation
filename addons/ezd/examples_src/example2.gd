@@ -2,6 +2,7 @@ class_name Example2
 extends KinematicBody2D
 # Example 2: Character Movement
 
+
 export var speed := 500.0
 export var smoothness := 5.0
 export var easing := -1.5
@@ -27,7 +28,7 @@ func apply_input() -> void:
 func apply_movement(delta : float) -> void:
 	var target := _dir * speed
 	
-	_vel = Ezd.ezd_vec2(_vel, target, smoothness * delta, easing)
+	_vel = Ezd.get_ezd_vec2(_vel, target, smoothness * delta, easing)
 	
 	_vel = move_and_slide(_vel, Vector2.UP)
 

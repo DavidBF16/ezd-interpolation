@@ -21,3 +21,16 @@ position = Vector2( 640, 360 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 300.0
+margin_bottom = 120.0
+rect_scale = Vector2( 2, 2 )
+text = "Use arrow left and right to rotate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="previous" to="spinyboi" method="_on_previous_button_up"]

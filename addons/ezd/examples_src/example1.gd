@@ -25,8 +25,8 @@ func _process(delta : float) -> void:
 	
 	var x := _timer / time
 	
-	global_position = Ezd.ezd_vec2(_current_node.global_position,
-		_current_target.global_position, x, -3.0)
+	global_position = Ezd.get_ezd_vec2(_current_node.global_position,
+		_current_target.global_position, x, easing)
 	
 	if x == 1:
 		_timer = 0
