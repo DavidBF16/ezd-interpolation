@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="ex3" type="Node2D"]
+
+[node name="previous" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 512.0
+margin_right = 224.0
+margin_bottom = 608.0
+rect_scale = Vector2( 2, 2 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}

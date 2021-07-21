@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/ezd/exemples_src/example1.gd" type="Script" id=1]
+[ext_resource path="res://addons/ezd/sprites/circle32.png" type="Texture" id=2]
+
+[node name="ex1" type="Node2D"]
+
+[node name="current" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+easing = 5.0
+
+[node name="begin" type="Sprite" parent="."]
+position = Vector2( 50, 50 )
+texture = ExtResource( 2 )
+
+[node name="end" type="Sprite" parent="."]
+position = Vector2( 704, 616 )
+texture = ExtResource( 2 )
+
+[node name="next" type="Button" parent="."]
+margin_left = 896.0
+margin_top = 512.0
+margin_right = 1056.0
+margin_bottom = 608.0
+rect_scale = Vector2( 2, 2 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="next" to="current" method="_on_next_button_up"]
