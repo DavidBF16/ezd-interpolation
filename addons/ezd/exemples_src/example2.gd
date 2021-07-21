@@ -18,11 +18,9 @@ func _physics_process(delta: float) -> void:
 	apply_movement(delta)
 
 func apply_input() -> void:
-	var x := Input.get_action_strength("ui_right")
-	- Input.get_action_strength("ui_left")
+	var x := Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
-	var y := Input.get_action_strength("ui_down") 
-	- Input.get_action_strength("ui_up")
+	var y := Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
 	_dir = Vector2(x, y)
 
