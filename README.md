@@ -6,6 +6,6 @@ Ezd is a simple asset that allows you to easily create eased interpolations. You
 The asset has 3 examples of what you can do with it.
 
 # Installation
-Copy/move the '''addons'''(https://github.com/DavidBF16/ezd-interpolation/tree/main/addons) folder to '''res://'''
+Copy/move the ['''addons'''](https://github.com/DavidBF16/ezd-interpolation/tree/main/addons) folder to '''res://'''
  
  Check https://github.com/DavidBF16/ezd-interpolation/blob/main/LICENSE for legal information.
