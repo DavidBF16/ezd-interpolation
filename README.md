@@ -13,6 +13,7 @@
  
  #### Example 1
  ![Example1](https://github.com/DavidBF16/ezd-interpolation/blob/main/example1Screenshot.png?raw=true)
+ 
  The first example is a simple animation from one point to another
  
  #### Example 2
