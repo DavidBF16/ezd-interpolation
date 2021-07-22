@@ -26,6 +26,8 @@
 
 
  #### Example 3
+ ![Example3](https://github.com/DavidBF16/ezd-interpolation/blob/main/example3Screenshot.png?raw=true)
+ 
  The third and last example is a simple character, the one you control the rotation with the left and right arrow keys
 
 
