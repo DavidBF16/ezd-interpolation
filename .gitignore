@@ -8,5 +8,6 @@ export_presets.cfg
 .mono/
 
 # Images
+ezd-logo.pn
 example1Screenshot.png
-ezd-logo.png
+example2Screenshot.png
