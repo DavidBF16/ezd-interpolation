@@ -12,6 +12,7 @@
  The examples are in [res://addons/ezd/examples/](https://github.com/DavidBF16/ezd-interpolation/tree/main/addons/ezd/examples)
  
  #### Example 1
+ ![Example1](https://github.com/DavidBF16/ezd-interpolation/blob/main/example1Screenshot.png?raw=true)
  The first example is a simple animation from one point to another
  
  #### Example 2
