@@ -54,7 +54,7 @@ static func get_ezd_degrees(from:float,to:float,weight:float,easing:float)->floa
 	return rad2deg(x)
 
 
-# Eased inverse float interpolation
+# Inverse eased float interpolation
 static func get_inverse_ezd_float(from:float,to:float,weight:float,easing:float)->float:
 	return inverse_lerp(from,to,ease(weight,easing))
 
