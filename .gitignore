@@ -6,6 +6,3 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
-
-# Logo
-ezd-logo.png
